@@ -12,7 +12,7 @@ RUN ./autogen.sh
 RUN make
 RUN make install
 
-VOLUME ["/data"]
+# Use WORKDIR to set your working directory for data instead of VOLUME
 WORKDIR /data
 
 ENTRYPOINT ["/usr/local/bin/audiowmark"]
